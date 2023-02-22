@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main - Task Zero
+ * main - mehn this task wasn't easy o
  *
- * Return 0
+ * Return Always 0
  *
  */
 
