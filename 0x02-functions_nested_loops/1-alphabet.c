@@ -3,14 +3,15 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: 0 (Success)
  */
-int print_alphabet(void)
+void  print_alphabet(void)
 {
-	char alphabet;
+	char a;
 
-	for (alphabet='a'; alphabet<='z'; alphabet++)
-		_putchar(alphabet);
+	for (a = 'a'; a <= 'z'; a++)
+	
+	_putchar(a);
 	
 	_putchar('\n');
 }
