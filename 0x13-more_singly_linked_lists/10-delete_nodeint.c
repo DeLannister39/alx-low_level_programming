@@ -7,7 +7,7 @@
  * specified index from list
  * @head: this  pointer ppoints  to listint_t structure
  * @index: The index of the node to delete
- * Return: if succeeded (1), else if it failed(-1)
+ * Return: if it  succeeded (1), else if it failed(-1)
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -38,3 +38,4 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(dnode);
 	}
 	return (1);
+}
