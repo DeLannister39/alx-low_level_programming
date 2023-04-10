@@ -9,6 +9,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t fd;
+
 	int fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
@@ -16,12 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	if (filename == NULL)
-	{
-		return (0);
-	}
-
-	char *buffer;
+	char *buffer;	
 	ssize_t d;
 	ssize_t e;
 
