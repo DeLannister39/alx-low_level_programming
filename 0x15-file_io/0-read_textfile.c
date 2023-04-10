@@ -5,31 +5,22 @@
  * @letters: No of Letters to be read
  * @filename: The text file that is being read
  * Return: (0) if Filename is NULL, w- when the actual number of bytes read
- *
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	char *buf;
 	ssize_t fd;
+	ssize_t w;
+	ssize_t t;
 
-	int fd = open(filename, O_RDONLY);
-
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-	{
 		return (0);
-	}
+	buf = malloc(sizeof(char) * letters);
+	t = read(fd, buf, letters);
+	w = write(STDOUT_FILENO, buf, t);
 
-	char *buffer;	
-	ssize_t d;
-	ssize_t e;
-
-
-	buffer = malloc(sizeof(char) * (letters + 1));
-	d = read(fd, buffer, letters);
-	e = write(STDOUT_FILENO, buffer, d);
-
-	free(buffer);
+	free(buf);
 	close(fd);
-
-	return (e);
+	return (w);
 }
-
