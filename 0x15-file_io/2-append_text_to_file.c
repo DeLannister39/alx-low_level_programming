@@ -7,16 +7,12 @@
  *
  * Return: If filename is NULL, the function returns  - -1.
  *         If the user lacks write permissions - -1.
- *         Else - 1.
+ *         else - 1.
  */
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	       
-	int len = 0;
-
-	int e;
+	int fd, e, len = 0;
 
 	if (filename == NULL)
 		return (-1);
