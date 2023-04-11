@@ -7,15 +7,15 @@
  */
 void print_binary(unsigned long int n)
 {
-	int a;
+	int i;
 	int num;
 	num = 0;
 
 	unsigned long int value;
 	
-	for (a = 63; a >= 0; a--)
+	for (i = 63; i >= 0; i--)
 	{
-		value = n >> a;
+		value = n >> i;
 
 		if (value & 1)
 		{
